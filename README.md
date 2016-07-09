@@ -1,2 +1,1 @@
-# jm_CPPM
-CPPM Library for Arduino
+# CPPM Library for Arduino
