@@ -84,7 +84,7 @@
 #define CPPM_OC1A 9 // Output Compare A Pin of Arduino Leonardo is pin 9 - OC1A (ATmega32U4 PB5)
 #define CPPM_OC1B 10 // Output Compare B Pin of Arduino Leonardo is pin 10 - OC1B (ATmega32U4 PB6)
 #define CPPM_OC1C 11 // Output Compare C Pin of Arduino Leonardo is pin 11 - OC1C (ATmega32U4 PB7) //+2016-06-15
-#define CPPM_ICP1_PINB PINB4
+#define CPPM_ICP1_PIND PIND4
 #define CPPM_OC1A_PINB PINB5
 #define CPPM_OC1B_PINB PINB6
 #define CPPM_OC1C_PINB PINB7
@@ -133,7 +133,10 @@
 #define CPPM_MSERVO 9 // 9 servos maximum in a 22ms frame
 
 enum {CPPM_AILE, CPPM_ELEV, CPPM_THRO, CPPM_RUDD, CPPM_GEAR, CPPM_AUX1, CPPM_AUX2, CPPM_AUX3, CPPM_AUX4};
-// standard definitions of Spektrum receivers (AR6200, R615X, R920X,...)
+// standard definitions of Spektrum receivers (AR6200, R615X, R920X,...) CPPM output (BIND connector)
+
+enum {CPPM_THR, CPPM_AIL, CPPM_ELE, CPPM_RUD, CPPM_RC5, CPPM_RC6, CPPM_RC7, CPPM_RC8, CPPM_RC9};
+// standard definitions of Spektrum transmitters (DX5e, DX6i, DX8, DX9,...) Trainer output (Jack 3.5mm connector)
 
 //------------------------------------------------------------------------------
 

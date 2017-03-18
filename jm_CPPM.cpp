@@ -724,7 +724,9 @@ jm_CPPM_Class::jm_CPPM_Class()
 	_begun0 = false;
 	_begun1 = false;
 	_begun2 = false;
+#if defined CPPM_OC1C //+2016-06-15
 	_begun3 = false;
+#endif
 }
 
 //------------------------------------------------------------------------------
