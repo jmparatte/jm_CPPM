@@ -79,22 +79,24 @@
 
 //------------------------------------------------------------------------------
 
-#if defined (__AVR_ATmega32U4__) //+2016-06-15,+2016-06-14
-#define CPPM_ICP1 4 // Input Capture Pin of Arduino Leonardo is pin 4 - ICP1 (ATmega32U4 PD4)
-#define CPPM_OC1A 9 // Output Compare A Pin of Arduino Leonardo is pin 9 - OC1A (ATmega32U4 PB5)
-#define CPPM_OC1B 10 // Output Compare B Pin of Arduino Leonardo is pin 10 - OC1B (ATmega32U4 PB6)
-#define CPPM_OC1C 11 // Output Compare C Pin of Arduino Leonardo is pin 11 - OC1C (ATmega32U4 PB7) //+2016-06-15
+#if defined (__AVR_ATmega328P__) // Arduino UNO and compatible (Duemilanove, Diecimila...)
+#define CPPM_ICP1 8 // Input Capture Pin - Arduino UNO D8 - ICP1 (ATmega328 PB0)
+#define CPPM_OC1A 9 // Output Compare A - Arduino UNO D9 - OC1A (ATmega328 PB1)
+#define CPPM_OC1B 10 // Output Compare B - Arduino UNO D10 - OC1B (ATmega328 PB2) //+2015-08-12
+#define CPPM_ICP1_PINB PINB0
+#define CPPM_OC1A_PINB PINB1
+#define CPPM_OC1B_PINB PINB2
+#elif defined (__AVR_ATmega32U4__) //+2016-06-15,+2016-06-14 Arduino Leonardo and compatible (Yún...)
+#define CPPM_ICP1 4 // Input Capture Pin - Arduino Leonardo D4 - ICP1 (ATmega32U4 PD4)
+#define CPPM_OC1A 9 // Output Compare A - Arduino Leonardo D9 - OC1A (ATmega32U4 PB5)
+#define CPPM_OC1B 10 // Output Compare B - Arduino Leonardo D10 - OC1B (ATmega32U4 PB6)
+#define CPPM_OC1C 11 // Output Compare C - Arduino Leonardo D11 - OC1C (ATmega32U4 PB7) //+2016-06-15
 #define CPPM_ICP1_PIND PIND4
 #define CPPM_OC1A_PINB PINB5
 #define CPPM_OC1B_PINB PINB6
 #define CPPM_OC1C_PINB PINB7
 #else
-#define CPPM_ICP1 8 // Input Capture Pin of Arduino UNO is pin 8 - ICP1 (ATmega328 PB0)
-#define CPPM_OC1A 9 // Output Compare A Pin of Arduino UNO is pin 9 - OC1A (ATmega328 PB1)
-#define CPPM_OC1B 10 // Output Compare B Pin of Arduino UNO is pin 10 - OC1B (ATmega328 PB2) //+2015-08-12
-#define CPPM_ICP1_PINB PINB0
-#define CPPM_OC1A_PINB PINB1
-#define CPPM_OC1B_PINB PINB2
+#error Sorry, your board is not compatible with this library.
 #endif
 
 //------------------------------------------------------------------------------
